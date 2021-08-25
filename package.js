@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('2.3.2');
   api.use('coffeescript');
   api.use('ecmascript');
+  api.use('alanning:roles');
   api.mainModule('sdui-rolechecks.js');
 });
 
@@ -21,6 +22,7 @@ Package.onTest(function(api) {
   api.use('coffeescript');
   api.use('ecmascript');
   api.use('tinytest');
+  api.use('alanning:roles');
   api.use('sdui-rolechecks');
   api.mainModule('sdui-rolechecks-tests.js');
 });
