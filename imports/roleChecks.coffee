@@ -9,6 +9,8 @@ export userWithIdIsInRole = ({role, id}) ->
       true
     when 'logged-in'
       id?
+    when 'username-is-admin'
+      Meteor.user()?.username is 'admin'
     else
       Roles.userIsInRole id, role
     
